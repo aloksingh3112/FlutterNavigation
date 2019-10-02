@@ -4,6 +4,7 @@ import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
 import './second_page.dart';
 import './third_page.dart';
 import './form.dart';
+import './fourth_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -64,11 +65,13 @@ class _MyHomePageState extends State<MyHomePage> {
   _getPage(int page) {
     switch (page) {
       case 0:
-        return new SecondPage();
-      case 1:
         return new FormClass();
-      default:
+      case 1:
+        return new SecondPage();
+      case 2:
         return new ThirdClass();
+      default:
+        return new FourthClass();
     }
   }
 }
